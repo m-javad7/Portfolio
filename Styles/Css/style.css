@@ -74,7 +74,8 @@ header {
 .container .image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   transition: all 0.4s ease-in-out;
   filter: grayscale(100%);
 }
@@ -135,4 +136,40 @@ header {
   display: none;
 }
 
-/*# sourceMappingURL=style.css.map */
+.menu {
+  position: fixed;
+  display: flex;
+  top: auto;
+  bottom: 0;
+  flex-direction: row;
+  justify-content: center;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  background-color: var(--color-grey-5);
+}
+.menu .menu_items {
+  padding: 1rem;
+  cursor: pointer;
+  background-color: var(--color-grey-4);
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.7rem 0;
+  box-shadow: var(--box-shadow-1);
+}
+.menu .menu_items i {
+  font-size: 1.2rem;
+  color: var(--color-grey-2);
+  pointer-events: none;
+}
+.menu .active-btn {
+  background-color: var(--color-secondary);
+  transition: all 0.4s ease-in-out;
+}
+.menu .active-btn i {
+  color: var(--color-white);
+}/*# sourceMappingURL=style.css.map */
