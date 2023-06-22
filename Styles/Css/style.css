@@ -58,12 +58,7 @@ header {
 }
 
 section {
-  min-height: 100vh;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  padding: 3rem 18rem;
+  padding: 4rem 2rem;
 }
 
 .container {
@@ -74,7 +69,9 @@ section {
 }
 
 .active {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   animation: appear 1s ease-in-out;
   transform: translateY(0) scaleY(1);
 }
@@ -107,38 +104,6 @@ section {
 .header-content .right_header .right_header_text {
   font-size: 1.2rem;
 }
-.header-content .btn_con {
-  margin-top: 30px;
-  display: flex;
-}
-.header-content .btn_con .btn_main {
-  width: 80%;
-  justify-content: space-between;
-  border-radius: 40px;
-  color: inherit;
-  font-weight: bold;
-  border: 1px solid var(--color-secondary);
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-}
-.header-content .btn_con .btn_main .btn_text {
-  font-size: 1rem;
-  padding: 8px 30px;
-}
-.header-content .btn_con .btn_main .btn_icon {
-  background-color: var(--color-secondary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  padding: 1.4rem;
-  font-size: 20px;
-}
-.header-content .btn_con .btn_main:hover {
-  transition: all 0.4s ease-out;
-  background-color: var(--color-secondary);
-}
 
 .left-header .image {
   border-radius: var(--br-sm-2);
@@ -159,16 +124,51 @@ section {
   display: none;
 }
 
+.btn_con {
+  margin-top: 30px;
+  display: flex;
+}
+.btn_con .btn_main {
+  justify-content: space-between;
+  border-radius: 40px;
+  color: inherit;
+  font-weight: bold;
+  border: 1px solid var(--color-secondary);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.btn_con .btn_main .btn_text {
+  font-size: 1rem;
+  padding: 8px 30px;
+}
+.btn_con .btn_main .btn_icon {
+  background-color: var(--color-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 1.4rem;
+  font-size: 20px;
+}
+.btn_con .btn_main:hover {
+  transition: all 0.4s ease-out;
+  background-color: var(--color-secondary);
+}
+
 /*About*/
 .about-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding-top: 3.5rem;
   padding-bottom: 5rem;
 }
 .about-container .right-about {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
+  padding-top: 2.5rem;
   grid-gap: 2rem;
 }
 .about-container .right-about .about-item {
@@ -210,12 +210,10 @@ section {
   height: 2px;
   background-color: var(--color-grey-5);
 }
-.about-container .left-about {
-  padding-right: 5rem;
-}
 .about-container .left-about p {
   line-height: 2rem;
-  padding: 1rem;
+  font-size: 1rem;
+  padding: 1rem 0;
   color: var(--color-grey-1);
 }
 .about-container .left-about h4 {
@@ -227,9 +225,10 @@ section {
   padding-bottom: 4rem;
 }
 .about-stats .progress-bars {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  font-size: 1rem;
   grid-gap: 2rem;
+  flex-direction: column;
 }
 .about-stats .progress-bars .progress-bar {
   display: flex;
@@ -263,22 +262,22 @@ section {
   width: 60%;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .html {
-  width: 80%;
+  width: 90%;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .css {
-  width: 95%;
+  width: 85%;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .js {
-  width: 75%;
-}
-.about-stats .progress-bars .progress-bar .progress-con .progress .react {
   width: 60%;
 }
-.about-stats .progress-bars .progress-bar .progress-con .progress .node {
-  width: 87%;
+.about-stats .progress-bars .progress-bar .progress-con .progress .react {
+  width: 45%;
 }
-.about-stats .progress-bars .progress-bar .progress-con .progress .python {
-  width: 70%;
+.about-stats .progress-bars .progress-bar .progress-con .progress .node {
+  width: 10%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .Php {
+  width: 35%;
 }
 
 .stat-title {
@@ -325,10 +324,11 @@ section {
 
 /*Timeline*/
 .timeline {
+  width: 90%;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   grid-gap: 2rem;
-  padding-bottom: 3rem;
+  padding-bottom: 6rem;
 }
 .timeline .timeline-item {
   position: relative;
@@ -337,7 +337,7 @@ section {
 }
 .timeline .timeline-item .tl-icon {
   position: absolute;
-  left: -27px;
+  left: -15px;
   top: 0;
   background-color: var(--color-secondary);
   width: 50px;
@@ -372,6 +372,7 @@ section {
 }
 .timeline .timeline-item p {
   color: var(--color-grey-2);
+  font-size: 1rem;
 }
 
 .menu {
@@ -414,8 +415,8 @@ section {
 .theme-btn {
   top: 5%;
   right: 3%;
-  width: 70px;
-  height: 70px;
+  width: 55px;
+  height: 55px;
   border-radius: 50%;
   background-color: var(--color-grey-4);
   cursor: pointer;
@@ -436,14 +437,6 @@ section {
 }
 
 @media (min-width: 768px) {
-  .header-content {
-    width: 95%;
-  }
-  .header-content .right_header_text {
-    font-size: 1rem !important;
-    line-height: 1.8rem;
-    padding: 20px 40px 20px 10px;
-  }
   .header-content .btn_con {
     margin: 0 25px;
   }
@@ -470,6 +463,9 @@ section {
   }
 }
 @media (min-width: 768px) {
+  .container {
+    padding: 4rem;
+  }
   .header-content {
     width: 95%;
     min-height: 100vh;
@@ -478,6 +474,11 @@ section {
   }
   .header-content .right_header {
     padding: 0;
+  }
+  .header-content .right_header .right_header_text {
+    font-size: 1rem !important;
+    line-height: 1.8rem;
+    padding: 20px 40px 20px 10px;
   }
   .header-content .right_header .right_header_name {
     font-size: 2.2rem;
@@ -507,6 +508,29 @@ section {
     clip-path: polygon(0 0, 46% 0, 79% 100%, 0% 100%);
   }
 }
+.left-about {
+  width: 90%;
+}
+
+.about-container .right-about {
+  width: 85%;
+  display: flex;
+  padding-top: 2.5rem;
+  grid-gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-stats {
+  padding: 0 2rem;
+}
+.about-stats .progress-bars {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+}
+
 @media (min-width: 1024px) {
   .header-content .right_header {
     display: flex;
@@ -523,6 +547,18 @@ section {
     line-height: 2rem;
     padding: 20px 40px 46px 10px;
     font-size: 1.4rem !important;
+  }
+  .about-container {
+    flex-direction: row;
+  }
+  .about-stats {
+    padding-right: 4rem;
+  }
+  .about-stats .progress-bars {
+    font-size: 1.4rem;
+  }
+  .stat-title {
+    font-size: 2.2rem;
   }
 }
 

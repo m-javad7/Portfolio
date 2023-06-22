@@ -52,12 +52,8 @@ a {
 }
 
 @mixin media($size){
-    @if($size == Mobile){
-        @media (min-width:768px){
-            @content;
-        }
-    }
-    @else if($size == Tablet){
+    
+    @if($size == Tablet){
         @media (min-width:768px){
             @content;
         }
