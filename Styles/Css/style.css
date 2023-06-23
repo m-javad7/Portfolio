@@ -38,8 +38,8 @@
 
 body {
   background-color: var(--color-primary);
+  font-size: 1rem;
   font-family: "Poppins", sans-serif;
-  font-size: 10px;
   color: var(--color-white);
   transition: all 0.4s ease-in-out;
 }
@@ -58,7 +58,7 @@ header {
 }
 
 section {
-  padding: 4rem 1rem;
+  padding: 2rem 4rem;
 }
 
 .container {
@@ -554,6 +554,7 @@ section {
   bottom: 0;
   flex-direction: row;
   justify-content: space-evenly;
+  align-items: center;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
@@ -585,14 +586,11 @@ section {
 }
 
 .theme-btn {
-  top: 5%;
-  right: 3%;
   width: 55px;
   height: 55px;
   border-radius: 50%;
   background-color: var(--color-grey-4);
   cursor: pointer;
-  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -635,9 +633,6 @@ section {
   }
 }
 @media (min-width: 768px) {
-  .container {
-    padding: 4rem;
-  }
   .header-content {
     width: 95%;
     min-height: 100vh;
@@ -662,8 +657,7 @@ section {
   }
   .left_header .image {
     border-radius: var(--br-sm-2);
-    height: 90%;
-    width: 80%;
+    width: 75%;
     margin-left: 2rem;
     background-color: var(--color-black);
     transition: all 0.4s ease-in-out;
@@ -683,7 +677,7 @@ section {
     width: 90%;
   }
   .about-container .right-about {
-    width: 85%;
+    width: 90%;
     display: flex;
     padding-top: 2.5rem;
     grid-gap: 2rem;
@@ -739,14 +733,19 @@ section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 2rem;
-    margin-top: 3rem img;
-    margin-top-width: 100%;
+    margin-top: 3rem;
+  }
+  .portfolios img {
+    width: 100%;
   }
   .contact-content-con {
     flex-direction: row;
-    padding: 2rem 0;
+    padding: 2rem 5rem 0 0;
     justify-content: space-around;
     align-items: center;
+  }
+  .contact-content-con .left-contact {
+    padding: 0 3rem;
   }
 }
 

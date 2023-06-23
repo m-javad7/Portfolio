@@ -33,9 +33,7 @@
 }
 
 @include media(Tablet) {
-  .container{
-    padding: 4rem;
-  }
+ 
   .header-content {
     width: 95%;
     min-height: 100vh;
@@ -60,8 +58,7 @@
     align-items: center;
     .image {
       border-radius: var(--br-sm-2);
-      height: 90%;
-      width: 80%;
+      width: 75%;
       margin-left: 2rem;
       background-color: var(--color-black);
       transition: all 0.4s ease-in-out;
@@ -84,7 +81,7 @@
 }
 .about-container{
 .right-about{
-  width: 85%;
+  width: 90%;
     display: flex;
     padding-top: 2.5rem;
     grid-gap: 2rem;
@@ -144,16 +141,19 @@
   display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 2rem;
-    margin-top: 3rem
+    margin-top: 3rem;
   img{
     width: 100%;
   }
 }
 .contact-content-con{
   flex-direction: row;
-    padding: 2rem 0;
+    padding: 2rem 5rem 0 0;
     justify-content: space-around;
     align-items: center;
+    .left-contact{
+      padding: 0 3rem;
+    }
 }
 
 }

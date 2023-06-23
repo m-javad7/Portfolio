@@ -5,7 +5,7 @@ header {
   overflow: hidden;
 }
 section {
-  padding: 4rem 1rem;
+  padding: 2rem 4rem;
 }
 .container {
   display: none;
@@ -518,6 +518,7 @@ section {
   bottom: 0;
   flex-direction: row;
   justify-content: space-evenly;
+  align-items: center;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
@@ -547,16 +548,14 @@ section {
     }
   }
 }
+
 // theme-light-mode
 .theme-btn {
-  top: 5%;
-  right: 3%;
   width: 55px;
   height: 55px;
   border-radius: 50%;
   background-color: var(--color-grey-4);
   cursor: pointer;
-  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
