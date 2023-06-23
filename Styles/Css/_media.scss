@@ -1,44 +1,20 @@
 
+
 @include media(Tablet) {
+  .active{
+    margin-bottom: 0;
+  }
   .header-content {
-    
-    
+    width: 95%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     .btn_con {
       margin: 0 25px;
       .btn_main {
         width: auto;
       }
     }
-  }
-  .image {
-    img {
-      width: 75%;
-    }
-  }
-  .menu {
-    height: 100vh;
-    position: fixed;
-    z-index: 10;
-    top: 50%;
-    right: 3%;
-    left: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transform: translateY(-50%);
-    background-color: unset;
-    width: auto;
-  }
-}
-
-@include media(Tablet) {
- 
-  .header-content {
-    width: 95%;
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
     .right_header {
       padding: 0;
       .right_header_text {
@@ -59,11 +35,13 @@
     .image {
       border-radius: var(--br-sm-2);
       width: 75%;
-      margin-left: 2rem;
+      height:80%;
+      margin-left: 4rem;
       background-color: var(--color-black);
       transition: all 0.4s ease-in-out;
     }
     .h-shape {
+      display: block !important;
       transition: all 0.4s ease-in-out;
       width: 45%;
       height: 100%;
@@ -82,15 +60,13 @@
 .about-container{
 .right-about{
   width: 90%;
-    display: flex;
+  grid-template-columns: repeat(2, 1fr);
     padding-top: 2.5rem;
     grid-gap: 2rem;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
 }
 }
 .about-stats {
+  width:100%;
   padding: 0 2rem;
   .progress-bars {
     display: grid;
@@ -101,8 +77,26 @@
   .portfolios{
     width: 90%;
   }
+  .menu {
+    height: 100vh;
+    position: fixed;
+    z-index: 10;
+    top: 50%;
+    right: 3%;
+    left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-50%);
+    background-color: unset;
+    width: auto;
+  }
 }
 @include media(Laptop) {
+  section{
+    width: 95%;
+  }
   .header-content {
     .right_header {
       display: flex;
