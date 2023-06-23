@@ -12,7 +12,7 @@
   }
   .image {
     img {
-      width: 75%!important;
+      width: 75%;
     }
   }
   .menu {
@@ -78,7 +78,7 @@
       clip-path: polygon(0 0, 46% 0, 79% 100%, 0% 100%);
     }
   }
-}
+
 .left-about{
   width: 90%;
 }
@@ -99,6 +99,10 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 2rem;
+  }
+}
+  .portfolios{
+    width: 90%;
   }
 }
 @include media(Laptop) {
@@ -132,5 +136,17 @@
 }
 .stat-title{
   font-size: 2.2rem;
+}
+.port-text {
+  font-size: 1.2rem;
+}
+.portfolios{
+  display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    margin-top: 3rem
+  img{
+    width: 100%;
+  }
 }
 }
